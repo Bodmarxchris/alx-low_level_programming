@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * print the sizes in function
+ * main - print the sizes in function
  *
  * Description: using the main function
  * this program prints sizes of datatypes
