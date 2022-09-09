@@ -3,8 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: using the function main 
- *
+ * Description: using the function main
  * Return: 0
 */
 int main(void)
