@@ -1,15 +1,10 @@
 #include <stdio.h>
-
 /**
- *
  * main - entry point
  *
  * Description: using the main function
  *
- * Return: alway returns 0
- *
- *
- *
+ * Return: 0
 */
 int main(void)
 {
