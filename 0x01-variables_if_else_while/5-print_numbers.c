@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  * main - Entry point 
  *
  * Return: 0
  */
+
 int main(void)
 {
 	int n = 0;
@@ -13,5 +15,5 @@ int main(void)
 		n++;
 	}
 	putchar('\n');
-	return (0);
+return (0);
 }
