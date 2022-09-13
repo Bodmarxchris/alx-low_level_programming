@@ -2,6 +2,7 @@
 
 /**
  * print_to_98 - printing all natural numbers from n to 98
+ * orders will be separated b comma followed by space
  * @n: the number that counting begins from
  */
 void print_to_98(int n)
@@ -10,7 +11,7 @@ void print_to_98(int n)
 	if (n >= 98)
 	{
 		while (n > 98)
-			printf("%d", ", n--);
+			printf("%d, ", n--);
 		printf("%d\n", n);
 	}
 
