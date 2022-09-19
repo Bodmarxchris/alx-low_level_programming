@@ -1,11 +1,10 @@
-#include <stdio.h>
 #include "main.h"
 
 /** _strcpy - copies string to a given memory location
  * @dest: where the string needs to be copied
  * @scr: where the string is initialy
  *
- * Return: char
+ * Return: string
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -16,7 +15,8 @@ char *_strcpy(char *dest, char *src)
 		*(dest + len) = *(scr + len);
 		len++;
 	}
-	*(dest + len) = *(scr + len);
+	
+	*(dest + len) = '\0';
 
 	return (dest);
 }
