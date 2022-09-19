@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /** _strcpy - copies string to a given memory location
