@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /** _strcpy - copies string to a given memory location
  * @dest: where the string needs to be copied
