@@ -6,6 +6,7 @@
  * @scr: where the string is initialy
  * Return: string
  */
+
 char *_strcpy(char *dest, char *src)
 {
 	int len = 0;
@@ -15,7 +16,6 @@ char *_strcpy(char *dest, char *src)
 		*(dest + len) = *(scr + len);
 		len++;
 	}
-	
 	*(dest + len) = '\0';
 
 	return (dest);
