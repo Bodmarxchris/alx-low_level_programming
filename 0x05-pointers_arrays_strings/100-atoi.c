@@ -7,7 +7,7 @@
  * @s: string to be converted
  * Return: int containing the converted number
  */
-int _atoi(char *)
+int _atoi(char *s)
 {
 	int index, ind2;
 	unsigned int res;
