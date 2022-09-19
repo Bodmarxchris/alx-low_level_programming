@@ -3,7 +3,7 @@
 /**
  * _strcpy - copies string to a given memory location
  * @dest: where the string needs to be copied
- * @scr: where the string is initialy
+ * @src: where the string is initialy
  * Return: string
  */
 
