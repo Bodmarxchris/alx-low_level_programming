@@ -6,7 +6,7 @@
  *
  * @dest: string 1
  * @src: string 2
- * @n: number of chars to include from appended string 
+ * @n: number of chars to include from appended string
  * Return: char pointer
  */
 char *_strncat(char *dest, char *src, int n)
