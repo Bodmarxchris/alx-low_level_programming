@@ -15,7 +15,7 @@ void print_number(int num)
 		num *= -1;
 	}
 	n = num;
-	if (n <d)
+	if (n < d)
 	{
 		_putchar('0' + n);
 	}
