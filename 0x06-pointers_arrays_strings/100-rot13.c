@@ -14,10 +14,13 @@ char *rot13(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (alphabet[j] == c[i])
+		for (j = 0; j < 52; j++)
 		{
-			c[i] = rot_13[j];
-			break;
+			if (alphabet[j] == c[i])
+			{
+				c[i] = rot_13[j];
+				break;
+			}
 		}
 	}
 	return (c);
