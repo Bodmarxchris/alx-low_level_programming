@@ -9,10 +9,11 @@
  * Return: returns pointer to @dest
  */
 
-char *_strcat(char *dest, char *src);
+char *_strcat(char *dest, char *src)
 {
 	int i = 0, j = 0;
 	char *p;
+
 	while (*(dest + i) != '\0')
 		i++;
 	while (*(src + j) != '\0')
