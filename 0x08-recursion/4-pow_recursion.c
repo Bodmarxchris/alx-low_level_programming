@@ -1,16 +1,17 @@
 #include "main.h"
 
 /**
- * factorial - returns the factorial of a given number or -1 if n is negative
- *
- * @n: number to factorize
- * Return: int
+ * w_recursion - returns the value of x raised to the power of 
+ * 
+ * @x: number to be raised
+ * @y: power
+ * Return: int of x to the power of y
  */
-int factorial(int n)
+int _pow_recursion(int x, int y)
 {
-	if (n < 0)
+	if (y < 0)
 		return (-1);
-	else if (n == 0)
+	else if (y == 0)
 		return (1);
-	return (n * factorial(n - 1));
+	return (x * _pow_recursion(x, y - 1));
 }
