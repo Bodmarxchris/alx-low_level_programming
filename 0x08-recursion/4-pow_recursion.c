@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * w_recursion - returns the value of x raised to the power of 
- * 
+ * w_recursion - returns the value of x raised to the power of
+ *
  * @x: number to be raised
  * @y: power
  * Return: int of x to the power of y
