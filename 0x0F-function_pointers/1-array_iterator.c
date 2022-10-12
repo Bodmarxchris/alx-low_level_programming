@@ -1,5 +1,5 @@
-#include "function_pointers.h"
 #include <stdio.h>
+#include "function_pointers.h"
 #include <stdlib.h>
 
 /**
@@ -8,6 +8,7 @@
  * @action: function to call for each element of array
  * Return: nothing
  */
+
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	unsigned int i;
