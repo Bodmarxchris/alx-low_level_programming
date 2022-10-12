@@ -5,6 +5,7 @@
 /**
  * array_iterator - executes a function given as a parameter
  * @size: size of array
+ * @array: where elements will be stored
  * @action: function to call for each element of array
  * Return: nothing
  */
