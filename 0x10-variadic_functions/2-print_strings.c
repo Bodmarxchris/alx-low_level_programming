@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_string - prints a string
- * @separator - separator char
+ * print_strings - prints a string
+ * @separator: separator char
  * @n: number of args
  */
 void print_strings(const char *separator, const unsigned int n, ...)

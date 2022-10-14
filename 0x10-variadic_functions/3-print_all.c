@@ -51,9 +51,10 @@ int print_s(va_list a)
 	return (0);
 }
 /**
- * print all - prints all
+ * print_all - prints all format of character
  * @format: format string that says arg types
  *
+ * return: Always 0.
  */
 void print_all(const char * const format, ...)
 {
