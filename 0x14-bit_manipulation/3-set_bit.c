@@ -3,7 +3,8 @@
 /**
  * set_bit - sets a bit
  * @n: integer to grab
- *
+ * @index: manipulated integer
+ * Return: -1
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
