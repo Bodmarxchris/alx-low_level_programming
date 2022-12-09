@@ -1,79 +1,46 @@
+/*
+ * File: 7-insert_dnodeint.c
+ * Auth: Nicolas Peter Wanjau
+ */
+
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - inserts node at given index
- * @h: address of pointer to current head node
- * @idx: the index to at which to insert
- * @n: the value of the inserted node
+ * insert_dnodeint_at_index - Inserts a new node in a dlistint_t
+ *                            list at a given position.
+ * @h: A pointer to the head of the dlistint_t list.
+ * @idx: The position to insert the new node.
+ * @n: The integer for the new node to contain.
  *
- * Return: new node or NULL
+ * Return: If the function fails - NULL.
+ *         Otherwise - the address of the new node.
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new = malloc(sizeof(dlistint_t)), *node;
+	dlistint_t *tmp = *h, *new;
 
-	if (!h || !new)
-		return (new ? free(new), NULL : NULL);
-	node = *h;
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+
+	for (; idx != 1; idx--)
+	{
+		tmp = tmp->next;
+		if (tmp == NULL)
+			return (NULL);
+	}
+
+	if (tmp->next == NULL)
+		return (add_dnodeint_end(h, n));
+
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+
 	new->n = n;
-	if (!idx)
-	{
-		new->prev = NULL;
-		new->next = node ? node : NULL;
-		if (node)
-			node->prev = new;
-		return (*h = new);
-	}
-	for (; node; node = node->next, idx--)
-	{
-		if (idx - 1 == 0)
-		{
-			new->prev = node;
-			new->next = node->next;
-			if (new->next)
-				new->next->prev = new;
-			node->next = new;
-			return (new);
-		}
-	}
-	return (free(new), NULL);
-}#include "lists.h"
+	new->prev = tmp;
+	new->next = tmp->next;
+	tmp->next->prev = new;
+	tmp->next = new;
 
-/**
- * insert_dnodeint_at_index - inserts node at given index
- * @h: address of pointer to current head node
- * @idx: the index to at which to insert
- * @n: the value of the inserted node
- *
- * Return: new node or NULL
- */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
-{
-	dlistint_t *new = malloc(sizeof(dlistint_t)), *node;
-
-	if (!h || !new)
-		return (new ? free(new), NULL : NULL);
-	node = *h;
-	new->n = n;
-	if (!idx)
-	{
-		new->prev = NULL;
-		new->next = node ? node : NULL;
-		if (node)
-			node->prev = new;
-		return (*h = new);
-	}
-	for (; node; node = node->next, idx--)
-	{
-		if (idx - 1 == 0)
-		{
-			new->prev = node;
-			new->next = node->next;
-			if (new->next)
-				new->next->prev = new;
-			node->next = new;
-			return (new);
-		}
-	}
-	return (free(new), NULL);
+	return (new);
 }
