@@ -1,37 +1,22 @@
+/*
+ * File: 4-free_dlistint.c
+ * Auth: Nicolas peter wanjau
+ */
+
 #include "lists.h"
 
 /**
- * free_dlistint - frees a dlist
- * @head: pointer to current head node
- *
- * Return: void
+ * free_dlistint - Frees a linked dlistint_t list.
+ * @head: The head of the dlistint_t list.
  */
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *node;
+	dlistint_t *tmp;
 
 	while (head)
 	{
-		node = head;
-		head = head->next;
-		free(node);
-	}
-}#include "lists.h"
-
-/**
- * free_dlistint - frees a dlist
- * @head: pointer to current head node
- *
- * Return: void
- */
-void free_dlistint(dlistint_t *head)
-{
-	dlistint_t *node;
-
-	while (head)
-	{
-		node = head;
-		head = head->next;
-		free(node);
+		tmp = head->next;
+		free(head);
+		head = tmp;
 	}
 }
